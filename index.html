@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="img/icon.png" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="parasha.js" defer></script>
+  <script src="mishnah.js" defer></script>
+  <script src="halakha.js" defer></script>
+  <script src="neviim.js" defer></script>
+      <script defer src="script.js"></script>
+
+    <link  href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"  rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Limoudim</title>
+
+
+  </head>
+
+
+
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img
+          src="img/logo.png"
+          alt="Bankist logo"
+          class="nav__logo"
+          id="logo"
+        
+          data-version-number="3.0"
+        />
+        <ul class="nav__links">
+
+          <li class="nav__item">
+            <a class="nav__link" href="#section--2">Limoud</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--1">Livres</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--5">Segoula</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--3">Podcast</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--4">Hessed</a>
+          </li>
+       
+          <li class="nav__item">
+            <a class="nav__link nav__link--btn btn--show-modal" href="#"
+              >Newsletter</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__title">
+        <!-- <h1 onclick="alert('HTML alert')"> -->
+        <h1>
+          Tout le
+          <!-- Green highlight effect -->
+          <span class="highlight">judaisme</span>
+          enfin<br />
+          <span class="highlight">accessible.</span>
+        </h1>
+        <h4>Un site complet pour une étude complete.</h4>
+        <button class="btn--text btn--scroll-to"></button>
+        <img
+          src="img/hero.png"
+          class="header__img"
+          alt="Minimalist bank items"
+        />
+      </div>
+    </header>
+
+
+
+
+
+    <section class="section" id="section--2">
+      <div class="section__title">
+        <h2 class="section__description">Limoud</h2>
+        <h3 class="section__header">
+          Une étude quotidienne pour finir le Tanakh, la Mishna et le Pniné Halakha entierement!
+        </h3>
+      </div>
+
+      
+
+
+
+      <div class="operations">
+        <div class="operations__tab-container">
+          <button
+            class="btn operations__tab operations__tab--1 operations__tab--active"   data-tab="1">
+            Parasha
+          </button>
+          <button class="btn operations__tab operations__tab--2" data-tab="2">
+            Neviim 
+          </button>
+          <button class="btn operations__tab operations__tab--3" data-tab="3">
+            Mishna 
+          </button>
+          <button class="btn operations__tab operations__tab--4" data-tab="4">
+            Halakha 
+          </button>
+        </div>
+
+
+
+        <div
+          class="operations__content operations__content--1 operations__content--active">
+          <div class="operations__icon operations__icon--1">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-upload"></use>
+            </svg>
+          </div>
+          <h5 class="operations__header">
+            Montée du jour
+          </h5>
+          <br/>
+          <div class="police">
+          <p align="justify" id="affichage1" ></p></div>
+          <p align="justify" id="affichage2"></p> <br/>
+          <p align="justify" id="commentary" class="A"></p>
+          <div id="button-container2"></div>
+        </div>
+
+
+        <div class="operations__content operations__content--2">
+          <div class="operations__icon operations__icon--2">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-home"></use>
+            </svg>
+          </div>
+          <h5 class="operations__header">
+            Prophete du jour
+          </h5>
+          <br/>
+          <div class="police">
+          <p align="justify" id="affichage7"></p> </div>
+          <p align="justify" id="affichage8"></p>
+          <div  align="justify" id="commentary4"></div>
+        </div>
+
+
+
+
+
+        <div class="operations__content operations__content--3">
+          <div class="operations__icon operations__icon--3">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-user-x"></use>
+            </svg>
+          </div>
+          <h5 class="operations__header">
+            Mishnah du jour
+          </h5>
+          <br/>
+          <div class="police">
+          <p align="justify" id="affichage3"></p></div>
+          <p align="justify" id="affichage4"></p>
+          <br/>
+          <button id="toggleCommentaryButton">Afficher les commentaires de Bartenoura</button>
+          <p align="justify" id="commentary2" class="commentary2"></p>
+        </div>
+
+
+          <div class="operations__content operations__content--4">
+            <div class="operations__icon operations__icon--4">
+              <svg>
+                <use xlink:href="img/icons.svg#icon-user-x"></use>
+              </svg>
+            </div>
+            <h5 class="operations__header">
+              Halakha du jour
+            </h5>
+            <p align="justify" id="affichage5"></p>
+            <p  align="justify" id="affichage6"></p>
+            <div align="justify" id="commentary3"></div>
+            <div id="button-container"></div>
+          </div>
+    </section>
+
+
+
+
+
+
+
+    
+    <section class="section" id="section--1">
+      <div class="section__title section__title--testimonials">
+        <h2 class="section__description">Livres</h2>
+        <h3 class="section__header">
+          De nombreux livres écrits par notre collectif.
+        </h3>
+      </div>
+<div class="operations__tab-container"></div>
+      <div class="slider">
+        <div class="slide">
+          <div class="testimonial">
+            <h5 class="testimonial__header">Les portes du jardin</h5>
+            <blockquote class="testimonial__text">
+              Et si l'on avait mal lu la bible? Si on l'avait lu trop vite, sans se rendre compte que notre lecture regorge de questionnements? Comment Aaron a pu faire le veau d'or? Comment Elisée peut il tuer des enfants?
+              Comment expliquer lorsque 2 livres se contredisent? Comment la lumiere peut elle etre crée avant le soleil? Toutes ces questions ont deja des réponses dans les exegeses rabbiniques que l'auteur va nous présenter.
+            </blockquote>
+            <address class="testimonial__author">
+             
+              <h6 class="testimonial__name">Prix:</h6>
+            
+              <p class="testimonial__location">En production.</p> <br/><a href="Porte.pdf">lire la version non finalisée</a>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="testimonial">
+            <h5 class="testimonial__header">
+              Les contres missionnaires
+            </h5>
+            <blockquote class="testimonial__text">
+              Depuis maintenant 20 siècles, les chrétiens ont cherché à convertir les juifs à leur foi. Depuis le début du christianisme, il y eu une volonté de faire des juifs des « véritables juifs accomplis » selon leur mots, des chrétiens en somme. 
+              Aujourd'hui nous avons toutes les ressources necessaires pour répondre efficacement et facilement à leurs arguments, et tous on été retranscrits dans cet ouvrage.
+            </blockquote>
+            <address class="testimonial__author">
+         
+              <h6 class="testimonial__name">Prix: </h6> 
+              <p class="testimonial__location">En production.</p> <br/><a href="contre.pdf">lire la version non finalisée</a>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="testimonial">
+            <h5 class="testimonial__header">
+              Lecon de Mishnah
+            </h5>
+            <blockquote class="testimonial__text">
+              Qu'est ce que la science contemporaine peut apporter à la Mishnah? Mieux: qu'est ce que la mishnah peut apporter à la science? L'auteur de cet ouvrage repasse en revue les 
+              différents articles scientifiques publiés afin de faire découvrir la mishnah sous un tout nouvel aspect.
+            </blockquote>
+            <address class="testimonial__author">
+              
+              <h6 class="testimonial__name">Prix:</h6> 
+              <p class="testimonial__location">En production</p> <br/><a href="mish.pdf">lire un extrait</a>
+            </address>
+          </div>
+        </div>
+
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+      </div>  </div>
+    </section>
+
+
+
+
+
+
+    <section class="section" id="section--5">
+      <div class="section__title section__title--testimonials">
+        <h2 class="section__description">Segoula</h2>
+        <h3 class="section__header">
+          Notre papeterie en ligne est enfin disponible! Rejoignez nous sur Instagram pour plus d'informations!
+        </h3>
+        <div class="podcast">
+          <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+          <div class="elfsight-app-171b0de4-e5a0-4317-884a-e209800f5972" data-elfsight-app-lazy></div>
+      </div>
+      </div>
+
+    </section>
+
+
+
+
+
+
+    
+    <section class="section" id="section--3">
+      <div class="section__title section__title--testimonials">
+        <h2 class="section__description">Podcast</h2>
+        <h3 class="section__header">
+          La mishna Avodah Zarah sous l'angle de l'histoire et de l'archéologie.
+        </h3>
+        <div class="podcast">
+        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/gb/podcast/mishna-avoda-zarah/id1550699196"></iframe>
+    
+      </div>
+      </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    
+    <section class="section" id="section--4">
+      <div class="section__title">
+        <h2 class="section__description">Hessed</h2>
+        <h3 class="section__header">
+          Offrez un chabat à une famille dans le besoin.
+        </h3>
+      </div>
+
+      <div class="features">
+        <img
+          src="img/digital.jpg"
+          data-src="img/digital.jpg"
+          alt="Computer"
+          class="features__img lazy-img"
+        />
+        <div class="features__feature">
+          <div class="features__icon">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-monitor"></use>
+            </svg>
+          </div>
+          <h5 class="features__header">Une main charitable</h5>
+          <p>
+            Nous offrons un service d'assistance destiné aux personnes en difficulté, en leur procurant un Chabbat complet, ce qui inclut le repas du vendredi soir ainsi que celui du samedi midi. </p>
+        </div>
+
+        <div class="features__feature">
+          <div class="features__icon">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-trending-up"></use>
+            </svg>
+          </div>
+          <h5 class="features__header">Une table remplis</h5>
+          <p>
+            Ce service généreux comprend une bouteille de vin, des hallots pour les deux repas, quatre entrées variées, deux plats principaux accompagnés de leurs garnitures, et deux desserts raffinés, le tout destiné à deux personnes. </p>
+        </div>
+        <img
+          src="img/grow.jpg"
+          data-src="img/grow.jpg"
+          alt="Plant"
+          class="features__img lazy-img"
+        />
+
+        <img
+          src="img/card.jpg"
+          data-src="img/card.jpg"
+          alt="Credit card"
+          class="features__img lazy-img"
+        />
+        <div class="features__feature">
+          <div class="features__icon">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-credit-card"></use>
+            </svg>
+          </div>
+          <h5 class="features__header">Une mitsva qui allonge la vie</h5>
+          <p>
+            Un grand nombre de familles juives n'ont pas les moyens de se nourrir dignement, encore moins de célébrer le Chabbat dans le respect de la tradition. En effectuant un don sur notre site, vous permettez à ces familles de bénéficier de repas complets et festifs. L'intégralité de votre contribution sera consacrée à la préparation et à la distribution de ces repas. </p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+      <ul class="footer__nav">
+        <li class="footer__item">
+          <a class="footer__link btn--show-modal2" href="#">A propos</a>
+          <li class="footer__item">
+            <a class="footer__link" href="https://www.youtube.com/@yomamvalayla3658/">Youtube</a>
+          </li>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="https://fr.tipeee.com/limoudim/">Faire un don</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="http://www.letanakh.wordpress.com">Blog</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="mailto:contacte@site.fr">Nous contacter</a>
+        </li>
+      </ul>
+      <img src="img/icon.png" alt="Logo" class="footer__logo" />
+  
+    </footer>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      
+      <h2 class="modal__header">
+       Vous souhaitez être informés des prochains lives ou de la sortie de nos livres?  Alors inscrivez vous:
+      </h2>
+      <form class="modal__form">
+        <label>Prénom </label>
+        <input type="text" />
+        <label>Nom</label>
+        <input type="text" />
+        <label>Email</label>
+        <input type="email" />
+        <button class="btn">Valider &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+
+
+
+    <div class="modal2 hidden">
+      <button class="btn--close-modal2">&times;</button>
+      <form class="modal2__form">
+       
+          <h1>Bienvenue sur notre site !</h1>
+          <br/>
+          <p>Nous vous offrons une étude quotidienne d'une grande richesse et profondeur. À l'instar du Hok LéIsrael, qui propose l'étude de la Torah, de la Guemara, du Zohar, de la Halakha et du Moussar, nous vous proposons une exploration exhaustive de la Bible, de la Mishnah et de la Halakha. Nous réservons l'étude quotidienne de la Guemara, appelée Daf Hayomi, à ceux qui ont atteint un niveau de maîtrise suffisant pour aborder avec aisance les matières que nous proposons ici. Voici la structure de notre programme d'étude :</p>
+      
+          <h2>La Parasha de la semaine</h2>
+          <p>La Torah est divisée en 54 parashiot (péricopes), chacune étant étudiée chaque semaine. Nous subdivisons chaque parasha en sept "montées", permettant ainsi une lecture quotidienne. En une année, vous aurez ainsi parcouru l'intégralité de la Torah.</p>
+      
+          <h2>Les Néviim</h2>
+          <p>Les livres des Prophètes sont lus à raison d'un chapitre par jour, ce qui permet de compléter l'intégralité des Néviim à la fin de l'année.</p>
+      
+          <h2>Les Kétouvim</h2>
+          <p>Le Livre des Psaumes et des Proverbes est intégré dans les prières quotidiennes, tandis que les Meguilot sont lues lors des fêtes (Chir Hachirim à Pessah, Ruth à Chavouot, Kohelet à Soukkot, Eikha à Tisha Beav et Esther à Pourim). Les livres de Daniel, Yiov, Chroniques et Ezra/Néhémie sont étudiés à Kippour (Yoma 1.6), répartis entre Rosh Hachana et Kippour, assurant ainsi une lecture complète annuelle des Kétouvim. En d'autres termes, à l'issue de l'année, vous aurez parcouru l'intégralité de la Bible à travers cette étude quotidienne structurée.</p>
+      
+          <h2>L'étude de la Mishnah</h2>
+          <p>Elle suit le cycle de la Mishnah Yomit, consistant en l'étude de deux mishnayot par jour, permettant d'achever ce cycle en six ans.</p>
+      
+          <h2>L'étude de la Halakha</h2>
+          <p>Elle s'appuie sur le cycle proposé par le site "La Perle Quotidienne", qui propose un paragraphe des ouvrages Pniné Halakha du Rav Melamed chaque jour. À ce jour, seuls neuf de ces ouvrages ont été traduits en français.</p>
+      <br/>
+          <p>Par ailleurs, ce site propose des podcasts offrant des études de la Mishnah de manière originale, ainsi que des vidéos sur la Halakha, le Talmud et d'autres thématiques. Vous y trouverez également divers ouvrages rédigés par notre collectif, ainsi qu'une invitation à offrir des repas de Shabbat aux nécessiteux.</p>
+      <br/>
+          <p>Nous espérons que vous trouverez dans ces ressources une source d'enrichissement et de profondeur spirituelle, vous accompagnant avec éclat dans votre cheminement.</p>
+      
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>
