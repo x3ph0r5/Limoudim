@@ -21,11 +21,8 @@ $.get(url, function(data) {
             let referenceHebrew = textData.heRef || "Référence non disponible";
             let referenceFrench = textData.ref || "Référence non disponible";
 
-            let element1 = document.getElementById("affichage3");
-            element1.innerHTML = "<p><strong> " + referenceHebrew + "</strong></p>" + textHebrew;
-
-            let element2 = document.getElementById("affichage4");
-            element2.innerHTML = "<p><strong> " + referenceFrench + "</strong></p>" + textFrench;
+            document.getElementById("affichage3").innerHTML = `<p><strong>${referenceHebrew}</strong></p>${textHebrew}`;
+            document.getElementById("affichage4").innerHTML = `<p><strong>${referenceFrench}</strong></p>${textFrench}`;
 
             // Fetching the commentary data after setting up the Mishna text
             $.get(comUrl, function(dataCom) {
@@ -56,24 +53,13 @@ $.get(url, function(data) {
                     };
                 } else {
                     console.error("Commentary data is not in the expected format or not available.");
-                    document.getElementById("commentary2").innerHTML = "Failed to fetch commentary.";
+                    document.getElementById("commentary2").innerHTML = "Commentary not available.";
                 }
-            }).fail(function() {
-                console.error("Failed to fetch commentary from API");
-                document.getElementById("commentary2").innerHTML = "Failed to fetch commentary.";
             });
 
-        }).fail(function() {
-            console.error("Failed to fetch Mishna text from text API");
-            document.getElementById("affichage3").innerHTML = "Failed to fetch Mishna text.";
-            document.getElementById("affichage4").innerHTML = "Failed to fetch Mishna text.";
         });
     } else {
         document.getElementById("affichage3").innerHTML = "Mishna item not found in the calendar.";
         document.getElementById("affichage4").innerHTML = "Mishna item not found in the calendar.";
     }
-}).fail(function() {
-    console.error("Failed to fetch data from calendar API");
-    document.getElementById("affichage3").innerHTML = "Failed to fetch calendar data.";
-    document.getElementById("affichage4").innerHTML = "Failed to fetch calendar data.";
 });
