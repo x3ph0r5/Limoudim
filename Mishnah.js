@@ -1,3 +1,8 @@
+$(document).ready(function() {
+    // Ton code ici
+
+
+
 let url = "https://www.sefaria.org/api/calendars?diaspora=1&custom=ashkenazi&timezone=Europe%2FParis"; // URL de l'API des calendriers
 
 $.get(url, function(data) {
@@ -53,3 +58,4 @@ $.get(url, function(data) {
         document.getElementById("affichage4").innerHTML = "Mishnah item not found in the calendar.";
     }
 });
+    });
